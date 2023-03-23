@@ -1,0 +1,23 @@
+---
+apt_pkgs:
+  - gcc
+  - git
+  - make
+  - meld
+  - openjdk-11-jdk-headless
+  # - openssh-server
+  - net-tools
+  - nmap
+  - perl
+  # - rdmacm-utils
+  - terminator
+  - terraform
+  - vim
+  # - virtualbox-6.1 # 20.04 package
+
+# snap_pkgs:
+#   - k9s
+#   - slack
+
+# snap_classic_pkgs:
+#   - kubectl
