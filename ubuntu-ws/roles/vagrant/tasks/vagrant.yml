@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Additional Hashicorp Repo
+      shell: |
+        curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
+        apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+    
+    - name: Install Vagrant
+      apt:
+        name: vagrant=2.3.4
+        update_cache: yes
+        autoremove: true
